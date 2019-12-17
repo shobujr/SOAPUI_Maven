@@ -1,0 +1,22 @@
+2019-12-16 20:58:22,828 WARN  [SoapUI] Missing folder [C:\Users\shobu\eclipse-workspace\SoapUIMavenJob\ext] for external libraries
+2019-12-16 20:58:23,029 INFO  [DefaultSoapUICore] initialized soapui-settings from [C:\Users\shobu\soapui-settings.xml]
+2019-12-16 20:58:23,674 INFO  [WsdlProject] Loaded project from [file:/C:/Users/shobu/eclipse-workspace/SoapUIMavenJob/src/main/java/resources/Project-1-soapui-project.xml]
+2019-12-16 20:58:23,962 INFO  [SoapUITestCaseRunner] Running SoapUI tests in project [Project 1]
+2019-12-16 20:58:23,963 INFO  [SoapUITestCaseRunner] Running Project [Project 1], runType = SEQUENTIAL
+2019-12-16 20:58:23,991 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [ListUser]
+2019-12-16 20:58:23,997 INFO  [SoapUITestCaseRunner] running step [ListUserTest]
+2019-12-16 20:58:24,555 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2019-12-16 20:58:24,558 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [ListUser], time taken: 365ms, status: FINISHED
+2019-12-16 20:58:24,560 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [SingleUser]
+2019-12-16 20:58:24,561 INFO  [SoapUITestCaseRunner] running step [SingleUserTeststep]
+2019-12-16 20:58:24,627 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2019-12-16 20:58:24,628 INFO  [SoapUITestCaseRunner] running step [SingeluserWithInvalid]
+2019-12-16 20:58:24,706 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status FAILED
+2019-12-16 20:58:24,706 ERROR [SoapUITestCaseRunner] ASSERTION FAILED -> Response status code:404 is not in acceptable list of status codes
+2019-12-16 20:58:24,708 ERROR [SoapUITestCaseRunner] SingeluserWithInvalid failed, exporting to [C:\Users\shobu\eclipse-workspace\SoapUIMavenJob\target\Results\TestSuit-SingleUser-SingeluserWithInvalid-0-FAILED.txt]
+2019-12-16 20:58:24,723 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [SingleUser], time taken: 127ms, status: FAILED
+2019-12-16 20:58:24,724 INFO  [SoapUITestCaseRunner] Running SoapUI testcase [Post_Demo]
+2019-12-16 20:58:24,725 INFO  [SoapUITestCaseRunner] running step [PostDemo]
+2019-12-16 20:58:24,990 INFO  [SoapUITestCaseRunner] Assertion [Valid HTTP Status Codes] has status VALID
+2019-12-16 20:58:24,990 INFO  [SoapUITestCaseRunner] Finished running SoapUI testcase [Post_Demo], time taken: 257ms, status: FINISHED
+2019-12-16 20:58:24,991 INFO  [SoapUITestCaseRunner] Project [Project 1] finished with status [FAILED] in 1023ms

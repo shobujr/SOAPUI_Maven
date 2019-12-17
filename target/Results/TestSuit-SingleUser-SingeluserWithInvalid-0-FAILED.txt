@@ -1,0 +1,50 @@
+Status: FAILED
+Time Taken: 71
+Size: 2
+Timestamp: Mon Dec 16 20:58:24 EST 2019
+TestStep: SingeluserWithInvalid
+
+----------------- Messages ------------------------------
+[Valid HTTP Status Codes] Response status code:404 is not in acceptable list of status codes
+
+----------------- Properties ------------------------------
+HTTP Version: HTTP/1.1
+Endpoint: https://reqres.in
+Encoding: UTF-8
+Method: GET
+StatusCode: 404
+URL: https://reqres.in/api/users/3444
+
+---------------- Request ---------------------------
+Connection: [Keep-Alive]
+User-Agent: [Apache-HttpClient/4.1.1 (java 1.5)]
+Host: [reqres.in]
+Accept-Encoding: [gzip,deflate]
+
+GET https://reqres.in/api/users/3444 HTTP/1.1
+Accept-Encoding: gzip,deflate
+Host: reqres.in
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.1.1 (java 1.5)
+
+
+---------------- Response --------------------------
+Server: [cloudflare]
+CF-RAY: [54654aacfd7d5691-IAD]
+Access-Control-Allow-Origin: [*]
+Connection: [keep-alive]
+Date: [Tue, 17 Dec 2019 01:58:23 GMT]
+Via: [1.1 vegur]
+CF-Cache-Status: [HIT]
+Etag: [W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"]
+Cache-Control: [max-age=14400]
+Set-Cookie: [__cfduid=d26d74e212c7b554d17205534f0a3b7911576547903; expires=Thu, 16-Jan-20 01:58:23 GMT; path=/; domain=.reqres.in; HttpOnly; Secure]
+Vary: [Accept-Encoding]
+#status#: [HTTP/1.1 404 Not Found]
+Content-Length: [2]
+Age: [74]
+Content-Type: [application/json; charset=utf-8]
+X-Powered-By: [Express]
+Expect-CT: [max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"]
+
+{}

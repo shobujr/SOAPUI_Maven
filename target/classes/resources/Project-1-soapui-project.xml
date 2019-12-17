@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="425a0af4-7c46-46e0-b05d-6fdbb2cbfc32" activeEnvironment="Default" name="Project 1" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="3e552e64-ffe9-48d2-89c6-63126f78bc30" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://reqres.in" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://reqres.in</con:endpoint>
+    </con:endpoints>
+    <con:resource name="ListUser" path="/api/users" id="d4b92fe5-3108-4396-b2f8-6aa8bb3c24af">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>page</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="ListUser" id="347bd102-f9dd-48ea-8f32-0285f4072979" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="f97b0ee2-77b8-4786-8f41-bda7e0895158" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>page</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="SingleUser" path="/api/users/{value}" id="baff8273-deb8-453b-8d80-c4443de7103d">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>value</con:name>
+          <con:value/>
+          <con:style>TEMPLATE</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Method 1" id="1b0f1e53-b75d-426b-9833-c1e499333265" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:ns="https://reqres.in/api/users/2">ns:Response</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="22545934-b48d-464b-bb87-0cca573bdae5" mediaType="application/json">
+          <con:settings/>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+          <con:parameterOrder>
+            <con:entry>value</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="users" path="/api/users" id="f339a80e-d369-4a5b-ab0d-44753faa3d90">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Method 1" id="023dd6a4-f2d8-49b9-ad01-62cfd2335bcf" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>201</con:status>
+          <con:params/>
+          <con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="d135ce51-039a-4ba4-ba53-aeff3d322911" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://reqres.in</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="8749faf8-975a-4400-8760-71509079c422" name="TestSuit">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="0a57f685-c869-4578-906c-ec086d68a0fd" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListUser" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="ListUserTest" id="df2b0751-2685-4179-b972-bd262a220dc6">
+        <con:settings/>
+        <con:config service="https://reqres.in" resourcePath="/api/users" methodName="ListUser" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="ListUserTest" id="f97b0ee2-77b8-4786-8f41-bda7e0895158" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="30a01be5-9fd3-4cea-9e95-a036f313542b" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="page" value="" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>page</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="bae56410-fcf1-445b-b012-4ac541b1c10e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SingleUser" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="SingleUserTeststep" id="b5500217-5727-4dcd-9e1d-ad8f1800b782">
+        <con:settings/>
+        <con:config service="https://reqres.in" resourcePath="/api/users/{value}" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="SingleUserTeststep" id="22545934-b48d-464b-bb87-0cca573bdae5" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users/2</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="20c9b3f4-91b6-4e5b-bf0d-ecb09be78774" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="value" value="2" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>value</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="SingeluserWithInvalid" id="50d75250-37d9-408e-a58c-dd7169c1a73f">
+        <con:settings/>
+        <con:config service="https://reqres.in" methodName="Method 1" resourcePath="/api/users/{value}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="SingeluserWithInvalid" id="9aeebb29-518f-419d-976a-551a0674fad8" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://reqres.in/api/users/3444</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="0c322f1c-b62d-4a31-bea0-9cda70121729" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <entry key="value" value="3444" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="6ed31587-4eb1-448f-9ba7-b173796e9b2a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Post_Demo" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="restrequest" name="PostDemo" id="fc80fa1c-e21b-4955-949f-08d47eefecaf">
+        <con:settings/>
+        <con:config service="https://reqres.in" resourcePath="/api/users" methodName="Method 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="PostDemo" id="d135ce51-039a-4ba4-ba53-aeff3d322911" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://reqres.in</con:endpoint>
+            <con:request>{
+    "name": "morpheus",
+    "job": "leader"
+}</con:request>
+            <con:originalUri>https://reqres.in/api/users</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="f2a75c57-0f89-4ecc-9494-7a7d0e709c29" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>201</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties/>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
